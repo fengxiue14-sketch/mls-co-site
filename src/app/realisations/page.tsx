@@ -14,14 +14,14 @@ export default function RealisationsPage() {
     {
       title: "Portfolio MLS Co",
       category: "Site Vitrine",
-      status: "En ligne",
-      statusColor: "green",
+      status: "En ligne bientôt",
+      statusColor: "gold",
       description:
         "Site officiel de notre agence. Présentation de nos services, de notre équipe et de nos réalisations. Construit avec Next.js et Supabase.",
       tech: ["Next.js", "TypeScript", "Tailwind", "Supabase"],
       icon: Globe,
-      url: "https://mls-co-site.vercel.app",
-      urlLabel: "Voir le site",
+      url: null,
+      urlLabel: "En cours de déploiement",
     },
     {
       title: "SaaS Gestion de Stock",
@@ -65,6 +65,7 @@ export default function RealisationsPage() {
 
     const icons: Record<string, typeof CheckCircle2> = {
       "En ligne": CheckCircle2,
+      "En ligne bientôt": Clock,
       Livré: CheckCircle2,
       "En négociation": Clock,
     };
