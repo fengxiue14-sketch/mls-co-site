@@ -1,26 +1,74 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Palette MLS Co */
+  --mls-navy: #0a1628;
+  --mls-marine: #1a2a4a;
+  --mls-gold: #f59e0b;
+  --mls-gold-dark: #d97706;
+  --mls-white: #ffffff;
+  --mls-gray-light: #f3f4f6;
+  --mls-gray-dark: #1f2937;
+  
+  --background: var(--mls-white);
+  --foreground: var(--mls-navy);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-mls-navy: var(--mls-navy);
+  --color-mls-marine: var(--mls-marine);
+  --color-mls-gold: var(--mls-gold);
+  --color-mls-gold-dark: var(--mls-gold-dark);
+  --color-mls-gray-light: var(--mls-gray-light);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Animations douces */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* Scrollbar personnalisée */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--mls-gray-light);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--mls-marine);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--mls-gold);
 }
