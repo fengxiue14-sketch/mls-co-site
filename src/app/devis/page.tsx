@@ -1,7 +1,18 @@
 "use client";
 
 import { useState } from "react";
-import { Check, Send, Star } from "lucide-react";
+import {
+  Check,
+  Send,
+  Star,
+  MessageCircle,
+  ArrowRight,
+  ClipboardList,
+  PhoneCall,
+  FileText,
+  Rocket,
+  CheckCircle2,
+} from "lucide-react";
 
 export default function DevisPage() {
   const [formData, setFormData] = useState({
@@ -14,7 +25,9 @@ export default function DevisPage() {
     delai: "",
     description: "",
   });
-  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+  const [status, setStatus] = useState<
+    "idle" | "loading" | "success" | "error"
+  >("idle");
   const [statusMessage, setStatusMessage] = useState("");
 
   const offres = [
@@ -62,8 +75,37 @@ export default function DevisPage() {
     },
   ];
 
+  const process = [
+    {
+      icon: ClipboardList,
+      step: "01",
+      title: "Vous remplissez le formulaire",
+      description: "Décrivez votre projet en détail avec le budget et le délai.",
+    },
+    {
+      icon: PhoneCall,
+      step: "02",
+      title: "Nous vous contactons sous 24h",
+      description: "Appel ou WhatsApp pour clarifier les points essentiels.",
+    },
+    {
+      icon: FileText,
+      step: "03",
+      title: "Vous recevez un devis détaillé",
+      description: "Prix, délai, livrables — tout est transparent.",
+    },
+    {
+      icon: Rocket,
+      step: "04",
+      title: "Démarrage du projet",
+      description: "Après validation, nous commençons immédiatement.",
+    },
+  ];
+
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >
   ) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
@@ -88,7 +130,9 @@ export default function DevisPage() {
 
       if (response.ok) {
         setStatus("success");
-        setStatusMessage("Demande envoyée ! Nous vous contacterons avec un devis sous 24h.");
+        setStatusMessage(
+          "Demande envoyée ! Nous vous contacterons avec un devis sous 24h."
+        );
         setFormData({
           nom: "",
           email: "",
@@ -105,15 +149,23 @@ export default function DevisPage() {
       }
     } catch {
       setStatus("error");
-      setStatusMessage("Impossible d'envoyer la demande. Vérifiez votre connexion.");
+      setStatusMessage(
+        "Impossible d'envoyer la demande. Vérifiez votre connexion."
+      );
     }
   };
 
   return (
     <div className="min-h-screen">
-      {/* Header */}
+      {/* ==================== HEADER ==================== */}
       <section className="bg-gradient-to-b from-mls-navy to-mls-marine text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="inline-flex items-center gap-2 bg-mls-gold/10 border border-mls-gold/30 rounded-full px-4 py-2 mb-6">
+            <Star size={16} className="text-mls-gold fill-mls-gold" />
+            <span className="text-sm text-mls-gold font-medium">
+              Devis 100% gratuit et sans engagement
+            </span>
+          </div>
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
             Demander un devis gratuit
           </h1>
@@ -123,12 +175,15 @@ export default function DevisPage() {
         </div>
       </section>
 
-      {/* Offres */}
+      {/* ==================== OFFRES ==================== */}
       <section className="py-20 bg-mls-gray-light">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-mls-navy text-center mb-12">
+          <h2 className="text-3xl font-bold text-mls-navy text-center mb-4">
             Nos offres packagées
           </h2>
+          <p className="text-lg text-mls-navy/60 text-center mb-12 max-w-2xl mx-auto">
+            Choisissez l&apos;offre la plus adaptée, ou demandez du sur-mesure
+          </p>
 
           <div className="grid md:grid-cols-3 gap-6">
             {offres.map((offre, i) => (
@@ -160,7 +215,10 @@ export default function DevisPage() {
                 <ul className="space-y-3 mb-8">
                   {offre.features.map((feature, j) => (
                     <li key={j} className="flex items-start gap-2 text-sm">
-                      <Check size={16} className="text-mls-gold flex-shrink-0 mt-0.5" />
+                      <Check
+                        size={16}
+                        className="text-mls-gold flex-shrink-0 mt-0.5"
+                      />
                       <span className="text-mls-navy/80">{feature}</span>
                     </li>
                   ))}
@@ -169,7 +227,9 @@ export default function DevisPage() {
                 <button
                   onClick={() => {
                     setFormData({ ...formData, offre: offre.nom });
-                    document.getElementById("devis-form")?.scrollIntoView({ behavior: "smooth" });
+                    document
+                      .getElementById("devis-form")
+                      ?.scrollIntoView({ behavior: "smooth" });
                   }}
                   className={`w-full py-3 rounded-lg font-semibold transition-all ${
                     offre.populaire
@@ -185,8 +245,8 @@ export default function DevisPage() {
         </div>
       </section>
 
-      {/* Formulaire */}
-      <section id="devis-form" className="py-20">
+      {/* ==================== FORMULAIRE ==================== */}
+      <section id="devis-form" className="py-20 scroll-mt-24">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-mls-navy text-center mb-4">
             Décrivez votre projet
@@ -287,8 +347,12 @@ export default function DevisPage() {
                 >
                   <option value="">Choisir</option>
                   <option value="< 150k">Moins de 150 000 FCFA</option>
-                  <option value="150k-300k">150 000 - 300 000 FCFA</option>
-                  <option value="300k-600k">300 000 - 600 000 FCFA</option>
+                  <option value="150k-300k">
+                    150 000 - 300 000 FCFA
+                  </option>
+                  <option value="300k-600k">
+                    300 000 - 600 000 FCFA
+                  </option>
                   <option value="> 600k">Plus de 600 000 FCFA</option>
                 </select>
               </div>
@@ -303,9 +367,13 @@ export default function DevisPage() {
                   className="w-full px-4 py-3 border border-mls-navy/10 rounded-lg focus:outline-none focus:border-mls-gold transition bg-white"
                 >
                   <option value="">Choisir</option>
-                  <option value="Urgent (< 1 mois)">Urgent (moins d&apos;1 mois)</option>
+                  <option value="Urgent (< 1 mois)">
+                    Urgent (moins d&apos;1 mois)
+                  </option>
                   <option value="Normal (1-3 mois)">Normal (1-3 mois)</option>
-                  <option value="Flexible (> 3 mois)">Flexible (plus de 3 mois)</option>
+                  <option value="Flexible (> 3 mois)">
+                    Flexible (plus de 3 mois)
+                  </option>
                 </select>
               </div>
             </div>
@@ -325,27 +393,101 @@ export default function DevisPage() {
               ></textarea>
             </div>
 
-            <button
-              type="submit"
-              disabled={status === "loading"}
-              className="w-full inline-flex items-center justify-center gap-2 bg-mls-gold hover:bg-mls-gold-dark disabled:opacity-50 disabled:cursor-not-allowed text-mls-navy font-semibold px-6 py-4 rounded-lg transition-all duration-200 hover:scale-105"
-            >
-              {status === "loading" ? "Envoi en cours..." : "Envoyer ma demande"}
-              <Send size={18} />
-            </button>
+            <div className="flex flex-col sm:flex-row gap-3">
+              <button
+                type="submit"
+                disabled={status === "loading"}
+                className="flex-1 inline-flex items-center justify-center gap-2 bg-mls-gold hover:bg-mls-gold-dark disabled:opacity-50 disabled:cursor-not-allowed text-mls-navy font-semibold px-6 py-4 rounded-lg transition-all duration-200 hover:scale-105"
+              >
+                {status === "loading"
+                  ? "Envoi en cours..."
+                  : "Envoyer ma demande"}
+                <Send size={18} />
+              </button>
+              <a
+                href="https://wa.me/22657022479"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 bg-green-600 hover:bg-green-700 text-white font-semibold px-6 py-4 rounded-lg transition-all duration-200 hover:scale-105"
+              >
+                <MessageCircle size={18} />
+                WhatsApp direct
+              </a>
+            </div>
 
             {statusMessage && (
               <div
-                className={`p-4 rounded-lg text-sm ${
+                className={`p-4 rounded-lg text-sm flex items-start gap-2 ${
                   status === "success"
                     ? "bg-green-50 text-green-700 border border-green-200"
                     : "bg-red-50 text-red-700 border border-red-200"
                 }`}
               >
-                {statusMessage}
+                {status === "success" && (
+                  <CheckCircle2 size={18} className="flex-shrink-0 mt-0.5" />
+                )}
+                <span>{statusMessage}</span>
               </div>
             )}
           </form>
+        </div>
+      </section>
+
+      {/* ==================== PROCESS ==================== */}
+      <section className="py-20 bg-mls-gray-light">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-mls-navy mb-4">
+              Comment ça marche ?
+            </h2>
+            <p className="text-lg text-mls-navy/60 max-w-2xl mx-auto">
+              De votre demande à la livraison, en 4 étapes simples
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {process.map((step, i) => (
+              <div
+                key={i}
+                className="relative bg-white rounded-2xl p-6 hover:shadow-xl transition-all duration-300"
+              >
+                <div className="text-5xl font-bold text-mls-gold/10 absolute top-4 right-4">
+                  {step.step}
+                </div>
+                <div className="w-12 h-12 rounded-xl bg-mls-gold/10 flex items-center justify-center mb-4">
+                  <step.icon size={24} className="text-mls-gold" />
+                </div>
+                <h3 className="text-lg font-bold text-mls-navy mb-2">
+                  {step.title}
+                </h3>
+                <p className="text-sm text-mls-navy/60">{step.description}</p>
+              </div>
+            ))}
+          </div>
+
+          <div className="text-center mt-12">
+            <p className="text-mls-navy/60 mb-4">
+              Besoin d&apos;en discuter directement ?
+            </p>
+            <div className="flex flex-col sm:flex-row gap-3 justify-center">
+              <a
+                href="https://wa.me/22657022479"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 bg-green-600 hover:bg-green-700 text-white font-semibold px-6 py-3 rounded-lg transition-all"
+              >
+                <MessageCircle size={18} />
+                WhatsApp : +226 57 02 24 79
+              </a>
+              <a
+                href="tel:+22658587638"
+                className="inline-flex items-center justify-center gap-2 border border-mls-navy/10 hover:border-mls-gold text-mls-navy font-semibold px-6 py-3 rounded-lg transition-all"
+              >
+                <PhoneCall size={18} />
+                Appeler : +226 58 58 76 38
+              </a>
+            </div>
+          </div>
         </div>
       </section>
     </div>

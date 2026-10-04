@@ -10,21 +10,30 @@ export default function Navbar() {
   const links = [
     { href: "/", label: "Accueil" },
     { href: "/services", label: "Services" },
-    { href: "/realisations", label: "Realisations" },
-    { href: "/equipe", label: "Equipe" },
+    { href: "/realisations", label: "Réalisations" },
+    { href: "/equipe", label: "Équipe" },
     { href: "/contact", label: "Contact" },
   ];
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-mls-navy/95 backdrop-blur-md border-b border-mls-marine/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
-          <Link href="/" className="flex items-center space-x-2">
-            <span className="text-2xl font-bold bg-gradient-to-r from-mls-gold to-mls-gold-dark bg-clip-text text-transparent">
-              MLS Co
+        <div className="flex justify-between items-center h-20">
+          {/* Logo + baseline */}
+          <Link href="/" className="flex items-center gap-3 group">
+            <img
+              src="/logo.jpg"
+              alt="MLS Co"
+              className="h-14 w-auto rounded transition-transform duration-200 group-hover:scale-105"
+            />
+            <span className="hidden md:flex flex-col text-[10px] leading-tight text-mls-gold/80 font-medium tracking-wider uppercase">
+              <span>Innover</span>
+              <span>Développer</span>
+              <span>Performer</span>
             </span>
           </Link>
 
+          {/* Menu desktop */}
           <div className="hidden md:flex items-center space-x-8">
             {links.map((link) => (
               <Link
@@ -43,6 +52,7 @@ export default function Navbar() {
             </Link>
           </div>
 
+          {/* Bouton mobile */}
           <button
             className="md:hidden text-white"
             onClick={() => setIsOpen(!isOpen)}
@@ -53,6 +63,7 @@ export default function Navbar() {
         </div>
       </div>
 
+      {/* Menu mobile */}
       {isOpen && (
         <div className="md:hidden bg-mls-navy border-t border-mls-marine/30">
           <div className="px-4 py-4 space-y-3">
