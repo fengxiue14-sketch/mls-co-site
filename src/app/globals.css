@@ -1,15 +1,27 @@
 @import "tailwindcss";
 
 :root {
-  /* Palette MLS Co */
-  --mls-navy: #0a1628;
-  --mls-marine: #1a2a4a;
-  --mls-gold: #f59e0b;
-  --mls-gold-dark: #d97706;
+  /* ============================================
+     PALETTE MLS Co — Alignée sur le logo
+     ============================================ */
+
+  /* Fonds */
+  --mls-navy: #0a1628;          /* Bleu nuit profond (fond global) */
+  --mls-marine: #1a2a4a;        /* Bleu marine (sections, cartes) */
+
+  /* Accents — BLEU DU LOGO */
+  --mls-blue: #1e6fd9;          /* Bleu vif principal (CTA, liens) */
+  --mls-blue-dark: #1557b0;     /* Bleu foncé (hover CTA) */
+  --mls-blue-light: #4da3ff;    /* Bleu clair (hover liens, highlights) */
+  --mls-blue-glow: #6bb6ff;     /* Bleu lumineux (focus, effets) */
+
+  /* Texte */
   --mls-white: #ffffff;
+  --mls-text-muted: #b8c5d9;    /* Gris bleuté (texte secondaire) */
   --mls-gray-light: #f3f4f6;
   --mls-gray-dark: #1f2937;
-  
+
+  /* Variables système */
   --background: var(--mls-white);
   --foreground: var(--mls-navy);
 }
@@ -17,11 +29,22 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+
+  /* Fonds */
   --color-mls-navy: var(--mls-navy);
   --color-mls-marine: var(--mls-marine);
-  --color-mls-gold: var(--mls-gold);
-  --color-mls-gold-dark: var(--mls-gold-dark);
+
+  /* Accents bleus */
+  --color-mls-blue: var(--mls-blue);
+  --color-mls-blue-dark: var(--mls-blue-dark);
+  --color-mls-blue-light: var(--mls-blue-light);
+  --color-mls-blue-glow: var(--mls-blue-glow);
+
+  /* Texte */
+  --color-mls-white: var(--mls-white);
+  --color-mls-text-muted: var(--mls-text-muted);
   --color-mls-gray-light: var(--mls-gray-light);
+  --color-mls-gray-dark: var(--mls-gray-dark);
 }
 
 * {
@@ -70,5 +93,5 @@ body {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--mls-gold);
+  background: var(--mls-blue);
 }

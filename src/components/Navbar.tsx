@@ -26,7 +26,7 @@ export default function Navbar() {
               alt="MLS Co"
               className="h-14 w-auto rounded transition-transform duration-200 group-hover:scale-105"
             />
-            <span className="hidden md:flex flex-col text-[10px] leading-tight text-mls-gold/80 font-medium tracking-wider uppercase">
+            <span className="hidden md:flex flex-col text-[10px] leading-tight text-mls-blue-light/80 font-medium tracking-wider uppercase">
               <span>Innover</span>
               <span>Développer</span>
               <span>Performer</span>
@@ -39,14 +39,14 @@ export default function Navbar() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-white/80 hover:text-mls-gold transition-colors duration-200 font-medium"
+                className="text-white/80 hover:text-mls-blue-light transition-colors duration-200 font-medium"
               >
                 {link.label}
               </Link>
             ))}
             <Link
               href="/devis"
-              className="bg-mls-gold hover:bg-mls-gold-dark text-mls-navy font-semibold px-5 py-2 rounded-lg transition-all duration-200 hover:scale-105"
+              className="bg-mls-blue-light hover:bg-mls-blue-dark text-mls-navy font-semibold px-5 py-2 rounded-lg transition-all duration-200 hover:scale-105"
             >
               Devis gratuit
             </Link>
@@ -71,7 +71,7 @@ export default function Navbar() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="block text-white/80 hover:text-mls-gold transition-colors"
+                className="block text-white/80 hover:text-mls-blue-light transition-colors"
                 onClick={() => setIsOpen(false)}
               >
                 {link.label}
@@ -79,7 +79,7 @@ export default function Navbar() {
             ))}
             <Link
               href="/devis"
-              className="block bg-mls-gold text-mls-navy font-semibold px-5 py-2 rounded-lg text-center"
+              className="block bg-mls-blue-light text-mls-navy font-semibold px-5 py-2 rounded-lg text-center"
               onClick={() => setIsOpen(false)}
             >
               Devis gratuit

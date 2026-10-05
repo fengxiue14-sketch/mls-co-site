@@ -13,14 +13,14 @@ export default function Footer() {
               alt="MLS Co"
               className="h-16 w-auto rounded mb-4"
             />
-            <p className="text-xs text-mls-gold/80 font-medium tracking-wider uppercase mb-4">
+            <p className="text-xs text-mls-blue-light/80 font-medium tracking-wider uppercase mb-4">
               Innover · Développer · Performer
             </p>
             <p className="text-sm mb-4 max-w-md">
               Agence digitale spécialisée dans la création de sites web, solutions SaaS
               et conseil digital. Transformez votre activité avec des solutions sur mesure.
             </p>
-            <p className="text-sm italic text-mls-gold/60 mb-4">
+            <p className="text-sm italic text-mls-blue-light/60 mb-4">
               « Des solutions digitales pour un monde qui évolue »
             </p>
             <div className="flex space-x-4">
@@ -28,7 +28,7 @@ export default function Footer() {
                 href="https://github.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-mls-gold transition"
+                className="hover:text-mls-blue-light transition"
                 aria-label="GitHub"
               >
                 <svg
@@ -50,7 +50,7 @@ export default function Footer() {
                 href="https://linkedin.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-mls-gold transition"
+                className="hover:text-mls-blue-light transition"
                 aria-label="LinkedIn"
               >
                 <svg
@@ -77,27 +77,27 @@ export default function Footer() {
             <h4 className="text-white font-semibold mb-4">Navigation</h4>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="/" className="hover:text-mls-gold transition">
+                <Link href="/" className="hover:text-mls-blue-light transition">
                   Accueil
                 </Link>
               </li>
               <li>
-                <Link href="/services" className="hover:text-mls-gold transition">
+                <Link href="/services" className="hover:text-mls-blue-light transition">
                   Services
                 </Link>
               </li>
               <li>
-                <Link href="/realisations" className="hover:text-mls-gold transition">
+                <Link href="/realisations" className="hover:text-mls-blue-light transition">
                   Réalisations
                 </Link>
               </li>
               <li>
-                <Link href="/equipe" className="hover:text-mls-gold transition">
+                <Link href="/equipe" className="hover:text-mls-blue-light transition">
                   Équipe
                 </Link>
               </li>
               <li>
-                <Link href="/devis" className="hover:text-mls-gold transition">
+                <Link href="/devis" className="hover:text-mls-blue-light transition">
                   Devis
                 </Link>
               </li>
@@ -109,43 +109,43 @@ export default function Footer() {
             <h4 className="text-white font-semibold mb-4">Contact</h4>
             <ul className="space-y-3 text-sm">
               <li className="flex items-center gap-2">
-                <Mail size={16} className="text-mls-gold flex-shrink-0" />
+                <Mail size={16} className="text-mls-blue-light flex-shrink-0" />
                 <a
                   href="mailto:contact@mlsco.com"
-                  className="hover:text-mls-gold transition"
+                  className="hover:text-mls-blue-light transition"
                 >
                   contact@mlsco.com
                 </a>
               </li>
               <li className="flex items-center gap-2">
-                <Phone size={16} className="text-mls-gold flex-shrink-0" />
+                <Phone size={16} className="text-mls-blue-light flex-shrink-0" />
                 <a
                   href="tel:+22657022479"
-                  className="hover:text-mls-gold transition"
+                  className="hover:text-mls-blue-light transition"
                 >
                   +226 57 02 24 79
                 </a>
               </li>
               <li className="flex items-center gap-2">
-                <Phone size={16} className="text-mls-gold flex-shrink-0" />
+                <Phone size={16} className="text-mls-blue-light flex-shrink-0" />
                 <a
                   href="tel:+22658587638"
-                  className="hover:text-mls-gold transition"
+                  className="hover:text-mls-blue-light transition"
                 >
                   +226 58 58 76 38
                 </a>
               </li>
               <li className="flex items-center gap-2">
-                <Phone size={16} className="text-mls-gold flex-shrink-0" />
+                <Phone size={16} className="text-mls-blue-light flex-shrink-0" />
                 <a
                   href="tel:+22601755040"
-                  className="hover:text-mls-gold transition"
+                  className="hover:text-mls-blue-light transition"
                 >
                   +226 01 75 50 40
                 </a>
               </li>
               <li className="flex items-center gap-2">
-                <MapPin size={16} className="text-mls-gold flex-shrink-0" />
+                <MapPin size={16} className="text-mls-blue-light flex-shrink-0" />
                 <span>Ouagadougou, Burkina Faso</span>
               </li>
             </ul>

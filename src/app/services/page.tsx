@@ -256,13 +256,13 @@ export default function ServicesPage() {
                 className="group bg-white border border-mls-navy/5 rounded-2xl p-6 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 flex flex-col"
               >
                 <div className="flex items-start justify-between mb-4">
-                  <div className="w-14 h-14 rounded-xl bg-mls-gold/10 flex items-center justify-center group-hover:bg-mls-gold transition-colors duration-300">
+                  <div className="w-14 h-14 rounded-xl bg-mls-blue-light/10 flex items-center justify-center group-hover:bg-mls-blue-light transition-colors duration-300">
                     <service.icon
                       size={26}
-                      className="text-mls-gold group-hover:text-mls-navy transition-colors duration-300"
+                      className="text-mls-blue-light group-hover:text-mls-navy transition-colors duration-300"
                     />
                   </div>
-                  <span className="text-[10px] font-semibold text-mls-gold uppercase tracking-wider bg-mls-gold/10 px-2 py-1 rounded">
+                  <span className="text-[10px] font-semibold text-mls-blue-light uppercase tracking-wider bg-mls-blue-light/10 px-2 py-1 rounded">
                     {service.category}
                   </span>
                 </div>
@@ -279,7 +279,7 @@ export default function ServicesPage() {
                     <li key={j} className="flex items-start gap-2 text-xs">
                       <Check
                         size={14}
-                        className="text-mls-gold flex-shrink-0 mt-0.5"
+                        className="text-mls-blue-light flex-shrink-0 mt-0.5"
                       />
                       <span className="text-mls-navy/70">{feature}</span>
                     </li>
@@ -288,7 +288,7 @@ export default function ServicesPage() {
 
                 <Link
                   href="/devis"
-                  className="inline-flex items-center gap-1 text-sm font-semibold text-mls-gold hover:text-mls-gold-dark transition mt-auto"
+                  className="inline-flex items-center gap-1 text-sm font-semibold text-mls-blue-light hover:text-mls-blue-dark transition mt-auto"
                 >
                   Demander un devis
                   <ArrowRight size={14} />
@@ -317,11 +317,11 @@ export default function ServicesPage() {
                 key={i}
                 className="relative bg-white rounded-2xl p-6 hover:shadow-xl transition-all duration-300"
               >
-                <div className="text-5xl font-bold text-mls-gold/10 absolute top-4 right-4">
+                <div className="text-5xl font-bold text-mls-blue-light/10 absolute top-4 right-4">
                   {step.step}
                 </div>
-                <div className="w-12 h-12 rounded-xl bg-mls-gold/10 flex items-center justify-center mb-4">
-                  <step.icon size={24} className="text-mls-gold" />
+                <div className="w-12 h-12 rounded-xl bg-mls-blue-light/10 flex items-center justify-center mb-4">
+                  <step.icon size={24} className="text-mls-blue-light" />
                 </div>
                 <h3 className="text-lg font-bold text-mls-navy mb-2">
                   {step.title}
@@ -346,14 +346,14 @@ export default function ServicesPage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/devis"
-              className="inline-flex items-center justify-center gap-2 bg-mls-gold hover:bg-mls-gold-dark text-mls-navy font-semibold px-8 py-4 rounded-lg transition-all duration-200 hover:scale-105"
+              className="inline-flex items-center justify-center gap-2 bg-mls-blue-light hover:bg-mls-blue-dark text-mls-navy font-semibold px-8 py-4 rounded-lg transition-all duration-200 hover:scale-105"
             >
               Demander un devis
               <ArrowRight size={20} />
             </Link>
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center gap-2 border border-white/20 hover:border-mls-gold hover:text-mls-gold text-white font-semibold px-8 py-4 rounded-lg transition-all duration-200"
+              className="inline-flex items-center justify-center gap-2 border border-white/20 hover:border-mls-blue-light hover:text-mls-blue-light text-white font-semibold px-8 py-4 rounded-lg transition-all duration-200"
             >
               Nous contacter
             </Link>

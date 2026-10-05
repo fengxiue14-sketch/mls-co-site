@@ -59,7 +59,7 @@ export default function RealisationsPage() {
   const getStatusBadge = (status: string, color: string) => {
     const colors: Record<string, string> = {
       green: "bg-green-100 text-green-700 border-green-200",
-      gold: "bg-mls-gold/10 text-mls-gold-dark border-mls-gold/30",
+      gold: "bg-mls-blue-light/10 text-mls-blue-dark border-mls-blue-light/30",
       blue: "bg-blue-100 text-blue-700 border-blue-200",
     };
 
@@ -101,7 +101,7 @@ export default function RealisationsPage() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {stats.map((stat, i) => (
               <div key={i} className="text-center">
-                <div className="text-3xl md:text-4xl font-bold text-mls-gold mb-1">
+                <div className="text-3xl md:text-4xl font-bold text-mls-blue-light mb-1">
                   {stat.value}
                 </div>
                 <div className="text-sm text-mls-navy/60">{stat.label}</div>
@@ -125,19 +125,19 @@ export default function RealisationsPage() {
                   {/* Bandeau visuel */}
                   <div className="relative h-48 bg-gradient-to-br from-mls-navy to-mls-marine flex items-center justify-center overflow-hidden">
                     <div className="absolute inset-0 opacity-20">
-                      <div className="absolute top-4 left-4 w-20 h-20 bg-mls-gold rounded-full filter blur-2xl"></div>
-                      <div className="absolute bottom-4 right-4 w-32 h-32 bg-mls-gold rounded-full filter blur-2xl"></div>
+                      <div className="absolute top-4 left-4 w-20 h-20 bg-mls-blue-light rounded-full filter blur-2xl"></div>
+                      <div className="absolute bottom-4 right-4 w-32 h-32 bg-mls-blue-light rounded-full filter blur-2xl"></div>
                     </div>
                     <Icon
                       size={64}
-                      className="relative text-mls-gold opacity-80 group-hover:scale-110 transition-transform duration-300"
+                      className="relative text-mls-blue-light opacity-80 group-hover:scale-110 transition-transform duration-300"
                     />
                   </div>
 
                   {/* Contenu */}
                   <div className="p-6 flex flex-col flex-grow">
                     <div className="flex items-center justify-between mb-3 flex-wrap gap-2">
-                      <span className="text-[10px] font-semibold text-mls-gold uppercase tracking-wider">
+                      <span className="text-[10px] font-semibold text-mls-blue-light uppercase tracking-wider">
                         {projet.category}
                       </span>
                       {getStatusBadge(projet.status, projet.statusColor)}
@@ -166,7 +166,7 @@ export default function RealisationsPage() {
                         href={projet.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 text-sm font-semibold text-mls-gold hover:text-mls-gold-dark transition mt-auto"
+                        className="inline-flex items-center gap-2 text-sm font-semibold text-mls-blue-light hover:text-mls-blue-dark transition mt-auto"
                       >
                         {projet.urlLabel}
                         <ExternalLink size={14} />
@@ -230,14 +230,14 @@ export default function RealisationsPage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/devis"
-              className="inline-flex items-center justify-center gap-2 bg-mls-gold hover:bg-mls-gold-dark text-mls-navy font-semibold px-8 py-4 rounded-lg transition-all duration-200 hover:scale-105"
+              className="inline-flex items-center justify-center gap-2 bg-mls-blue-light hover:bg-mls-blue-dark text-mls-navy font-semibold px-8 py-4 rounded-lg transition-all duration-200 hover:scale-105"
             >
               Démarrer mon projet
               <ArrowRight size={20} />
             </Link>
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center gap-2 border border-white/20 hover:border-mls-gold hover:text-mls-gold text-white font-semibold px-8 py-4 rounded-lg transition-all duration-200"
+              className="inline-flex items-center justify-center gap-2 border border-white/20 hover:border-mls-blue-light hover:text-mls-blue-light text-white font-semibold px-8 py-4 rounded-lg transition-all duration-200"
             >
               Nous contacter
             </Link>

@@ -160,9 +160,9 @@ export default function DevisPage() {
       {/* ==================== HEADER ==================== */}
       <section className="bg-gradient-to-b from-mls-navy to-mls-marine text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="inline-flex items-center gap-2 bg-mls-gold/10 border border-mls-gold/30 rounded-full px-4 py-2 mb-6">
-            <Star size={16} className="text-mls-gold fill-mls-gold" />
-            <span className="text-sm text-mls-gold font-medium">
+          <div className="inline-flex items-center gap-2 bg-mls-blue-light/10 border border-mls-blue-light/30 rounded-full px-4 py-2 mb-6">
+            <Star size={16} className="text-mls-blue-light fill-mls-blue-light" />
+            <span className="text-sm text-mls-blue-light font-medium">
               Devis 100% gratuit et sans engagement
             </span>
           </div>
@@ -191,12 +191,12 @@ export default function DevisPage() {
                 key={i}
                 className={`relative bg-white rounded-2xl p-8 ${
                   offre.populaire
-                    ? "border-2 border-mls-gold shadow-2xl md:-translate-y-4"
+                    ? "border-2 border-mls-blue-light shadow-2xl md:-translate-y-4"
                     : "border border-mls-navy/5 hover:shadow-xl"
                 } transition-all duration-300`}
               >
                 {offre.populaire && (
-                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-mls-gold text-mls-navy text-xs font-bold px-4 py-1 rounded-full flex items-center gap-1">
+                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-mls-blue-light text-mls-navy text-xs font-bold px-4 py-1 rounded-full flex items-center gap-1">
                     <Star size={12} className="fill-mls-navy" />
                     POPULAIRE
                   </div>
@@ -208,7 +208,7 @@ export default function DevisPage() {
                 <p className="text-sm text-mls-navy/60 mb-6">
                   {offre.description}
                 </p>
-                <div className="text-3xl font-bold text-mls-gold mb-6">
+                <div className="text-3xl font-bold text-mls-blue-light mb-6">
                   {offre.prix}
                 </div>
 
@@ -217,7 +217,7 @@ export default function DevisPage() {
                     <li key={j} className="flex items-start gap-2 text-sm">
                       <Check
                         size={16}
-                        className="text-mls-gold flex-shrink-0 mt-0.5"
+                        className="text-mls-blue-light flex-shrink-0 mt-0.5"
                       />
                       <span className="text-mls-navy/80">{feature}</span>
                     </li>
@@ -233,7 +233,7 @@ export default function DevisPage() {
                   }}
                   className={`w-full py-3 rounded-lg font-semibold transition-all ${
                     offre.populaire
-                      ? "bg-mls-gold hover:bg-mls-gold-dark text-mls-navy"
+                      ? "bg-mls-blue-light hover:bg-mls-blue-dark text-mls-navy"
                       : "bg-mls-navy hover:bg-mls-marine text-white"
                   }`}
                 >
@@ -267,7 +267,7 @@ export default function DevisPage() {
                   value={formData.nom}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 border border-mls-navy/10 rounded-lg focus:outline-none focus:border-mls-gold transition"
+                  className="w-full px-4 py-3 border border-mls-navy/10 rounded-lg focus:outline-none focus:border-mls-blue-light transition"
                   placeholder="Votre nom"
                 />
               </div>
@@ -281,7 +281,7 @@ export default function DevisPage() {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 border border-mls-navy/10 rounded-lg focus:outline-none focus:border-mls-gold transition"
+                  className="w-full px-4 py-3 border border-mls-navy/10 rounded-lg focus:outline-none focus:border-mls-blue-light transition"
                   placeholder="votre@email.com"
                 />
               </div>
@@ -297,7 +297,7 @@ export default function DevisPage() {
                   name="telephone"
                   value={formData.telephone}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 border border-mls-navy/10 rounded-lg focus:outline-none focus:border-mls-gold transition"
+                  className="w-full px-4 py-3 border border-mls-navy/10 rounded-lg focus:outline-none focus:border-mls-blue-light transition"
                   placeholder="+226 XX XX XX XX"
                 />
               </div>
@@ -310,7 +310,7 @@ export default function DevisPage() {
                   name="entreprise"
                   value={formData.entreprise}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 border border-mls-navy/10 rounded-lg focus:outline-none focus:border-mls-gold transition"
+                  className="w-full px-4 py-3 border border-mls-navy/10 rounded-lg focus:outline-none focus:border-mls-blue-light transition"
                   placeholder="Nom de votre entreprise"
                 />
               </div>
@@ -326,7 +326,7 @@ export default function DevisPage() {
                   value={formData.offre}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 border border-mls-navy/10 rounded-lg focus:outline-none focus:border-mls-gold transition bg-white"
+                  className="w-full px-4 py-3 border border-mls-navy/10 rounded-lg focus:outline-none focus:border-mls-blue-light transition bg-white"
                 >
                   <option value="">Choisir</option>
                   <option value="Essentiel">Essentiel</option>
@@ -343,7 +343,7 @@ export default function DevisPage() {
                   name="budget"
                   value={formData.budget}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 border border-mls-navy/10 rounded-lg focus:outline-none focus:border-mls-gold transition bg-white"
+                  className="w-full px-4 py-3 border border-mls-navy/10 rounded-lg focus:outline-none focus:border-mls-blue-light transition bg-white"
                 >
                   <option value="">Choisir</option>
                   <option value="< 150k">Moins de 150 000 FCFA</option>
@@ -364,7 +364,7 @@ export default function DevisPage() {
                   name="delai"
                   value={formData.delai}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 border border-mls-navy/10 rounded-lg focus:outline-none focus:border-mls-gold transition bg-white"
+                  className="w-full px-4 py-3 border border-mls-navy/10 rounded-lg focus:outline-none focus:border-mls-blue-light transition bg-white"
                 >
                   <option value="">Choisir</option>
                   <option value="Urgent (< 1 mois)">
@@ -388,7 +388,7 @@ export default function DevisPage() {
                 onChange={handleChange}
                 required
                 rows={6}
-                className="w-full px-4 py-3 border border-mls-navy/10 rounded-lg focus:outline-none focus:border-mls-gold transition resize-none"
+                className="w-full px-4 py-3 border border-mls-navy/10 rounded-lg focus:outline-none focus:border-mls-blue-light transition resize-none"
                 placeholder="Décrivez votre projet : objectifs, fonctionnalités souhaitées, inspiration..."
               ></textarea>
             </div>
@@ -397,7 +397,7 @@ export default function DevisPage() {
               <button
                 type="submit"
                 disabled={status === "loading"}
-                className="flex-1 inline-flex items-center justify-center gap-2 bg-mls-gold hover:bg-mls-gold-dark disabled:opacity-50 disabled:cursor-not-allowed text-mls-navy font-semibold px-6 py-4 rounded-lg transition-all duration-200 hover:scale-105"
+                className="flex-1 inline-flex items-center justify-center gap-2 bg-mls-blue-light hover:bg-mls-blue-dark disabled:opacity-50 disabled:cursor-not-allowed text-mls-navy font-semibold px-6 py-4 rounded-lg transition-all duration-200 hover:scale-105"
               >
                 {status === "loading"
                   ? "Envoi en cours..."
@@ -451,11 +451,11 @@ export default function DevisPage() {
                 key={i}
                 className="relative bg-white rounded-2xl p-6 hover:shadow-xl transition-all duration-300"
               >
-                <div className="text-5xl font-bold text-mls-gold/10 absolute top-4 right-4">
+                <div className="text-5xl font-bold text-mls-blue-light/10 absolute top-4 right-4">
                   {step.step}
                 </div>
-                <div className="w-12 h-12 rounded-xl bg-mls-gold/10 flex items-center justify-center mb-4">
-                  <step.icon size={24} className="text-mls-gold" />
+                <div className="w-12 h-12 rounded-xl bg-mls-blue-light/10 flex items-center justify-center mb-4">
+                  <step.icon size={24} className="text-mls-blue-light" />
                 </div>
                 <h3 className="text-lg font-bold text-mls-navy mb-2">
                   {step.title}
@@ -481,7 +481,7 @@ export default function DevisPage() {
               </a>
               <a
                 href="tel:+22658587638"
-                className="inline-flex items-center justify-center gap-2 border border-mls-navy/10 hover:border-mls-gold text-mls-navy font-semibold px-6 py-3 rounded-lg transition-all"
+                className="inline-flex items-center justify-center gap-2 border border-mls-navy/10 hover:border-mls-blue-light text-mls-navy font-semibold px-6 py-3 rounded-lg transition-all"
               >
                 <PhoneCall size={18} />
                 Appeler : +226 58 58 76 38

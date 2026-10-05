@@ -79,23 +79,23 @@ export default function Home() {
       {/* ============================================================ */}
       <section className="relative bg-gradient-to-b from-mls-navy to-mls-marine text-white py-20 md:py-32 overflow-hidden">
         <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-20 left-10 w-72 h-72 bg-mls-gold rounded-full filter blur-3xl"></div>
-          <div className="absolute bottom-20 right-10 w-96 h-96 bg-mls-gold rounded-full filter blur-3xl"></div>
+          <div className="absolute top-20 left-10 w-72 h-72 bg-mls-blue-light rounded-full filter blur-3xl"></div>
+          <div className="absolute bottom-20 right-10 w-96 h-96 bg-mls-blue-light rounded-full filter blur-3xl"></div>
         </div>
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="animate-fade-in-up">
-              <div className="inline-flex items-center gap-2 bg-mls-gold/10 border border-mls-gold/30 rounded-full px-4 py-2 mb-6">
-                <Zap size={16} className="text-mls-gold" />
-                <span className="text-sm text-mls-gold font-medium">
+              <div className="inline-flex items-center gap-2 bg-mls-blue-light/10 border border-mls-blue-light/30 rounded-full px-4 py-2 mb-6">
+                <Zap size={16} className="text-mls-blue-light" />
+                <span className="text-sm text-mls-blue-light font-medium">
                   Agence digitale nouvelle génération
                 </span>
               </div>
 
               <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
                 Des solutions digitales pour un monde qui{" "}
-                <span className="bg-gradient-to-r from-mls-gold to-mls-gold-dark bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-mls-blue-light to-mls-blue-dark bg-clip-text text-transparent">
                   évolue
                 </span>
               </h1>
@@ -108,14 +108,14 @@ export default function Home() {
               <div className="flex flex-col sm:flex-row gap-4 mb-8">
                 <Link
                   href="/devis"
-                  className="inline-flex items-center justify-center gap-2 bg-mls-gold hover:bg-mls-gold-dark text-mls-navy font-semibold px-8 py-4 rounded-lg transition-all duration-200 hover:scale-105"
+                  className="inline-flex items-center justify-center gap-2 bg-mls-blue-light hover:bg-mls-blue-dark text-mls-navy font-semibold px-8 py-4 rounded-lg transition-all duration-200 hover:scale-105"
                 >
                   Demander un devis gratuit
                   <ArrowRight size={20} />
                 </Link>
                 <Link
                   href="/services"
-                  className="inline-flex items-center justify-center gap-2 border border-white/20 hover:border-mls-gold hover:text-mls-gold text-white font-semibold px-8 py-4 rounded-lg transition-all duration-200"
+                  className="inline-flex items-center justify-center gap-2 border border-white/20 hover:border-mls-blue-light hover:text-mls-blue-light text-white font-semibold px-8 py-4 rounded-lg transition-all duration-200"
                 >
                   Voir nos services
                 </Link>
@@ -123,15 +123,15 @@ export default function Home() {
 
               <div className="flex flex-wrap gap-x-6 gap-y-2 text-sm text-white/60">
                 <span className="flex items-center gap-2">
-                  <CheckCircle2 size={16} className="text-mls-gold" />
+                  <CheckCircle2 size={16} className="text-mls-blue-light" />
                   Devis en 24h
                 </span>
                 <span className="flex items-center gap-2">
-                  <CheckCircle2 size={16} className="text-mls-gold" />
+                  <CheckCircle2 size={16} className="text-mls-blue-light" />
                   Sans engagement
                 </span>
                 <span className="flex items-center gap-2">
-                  <CheckCircle2 size={16} className="text-mls-gold" />
+                  <CheckCircle2 size={16} className="text-mls-blue-light" />
                   Support local
                 </span>
               </div>
@@ -139,13 +139,13 @@ export default function Home() {
 
             <div className="hidden md:block">
               <div className="relative">
-                <div className="bg-mls-marine/50 backdrop-blur-sm border border-mls-gold/20 rounded-2xl p-8 shadow-2xl">
+                <div className="bg-mls-marine/50 backdrop-blur-sm border border-mls-blue-light/20 rounded-2xl p-8 shadow-2xl">
                   <div className="flex items-center gap-2 mb-4">
                     <div className="w-3 h-3 rounded-full bg-red-500"></div>
                     <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
                     <div className="w-3 h-3 rounded-full bg-green-500"></div>
                   </div>
-                  <pre className="text-xs text-mls-gold font-mono overflow-hidden">
+                  <pre className="text-xs text-mls-blue-light font-mono overflow-hidden">
 {`const mls = {
   services: [
     "sites-web",
@@ -194,10 +194,10 @@ mls.build(your_ideas);`}
                 key={i}
                 className="group bg-white border border-mls-navy/5 rounded-2xl p-6 hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
               >
-                <div className="w-12 h-12 rounded-xl bg-mls-gold/10 flex items-center justify-center mb-4 group-hover:bg-mls-gold transition-colors duration-300">
+                <div className="w-12 h-12 rounded-xl bg-mls-blue-light/10 flex items-center justify-center mb-4 group-hover:bg-mls-blue-light transition-colors duration-300">
                   <service.icon
                     size={24}
-                    className="text-mls-gold group-hover:text-mls-navy transition-colors duration-300"
+                    className="text-mls-blue-light group-hover:text-mls-navy transition-colors duration-300"
                   />
                 </div>
                 <h3 className="text-xl font-bold text-mls-navy mb-2">
@@ -211,7 +211,7 @@ mls.build(your_ideas);`}
           <div className="text-center mt-12">
             <Link
               href="/services"
-              className="inline-flex items-center gap-2 text-mls-gold hover:text-mls-gold-dark font-semibold transition"
+              className="inline-flex items-center gap-2 text-mls-blue-light hover:text-mls-blue-dark font-semibold transition"
             >
               Voir les 11 services en détail
               <ArrowRight size={18} />
@@ -240,8 +240,8 @@ mls.build(your_ideas);`}
                 key={i}
                 className="bg-gradient-to-br from-mls-navy to-mls-marine text-white rounded-2xl p-6 text-center hover:shadow-2xl hover:-translate-y-1 transition-all duration-300"
               >
-                <div className="w-14 h-14 rounded-full bg-mls-gold/20 flex items-center justify-center mx-auto mb-4">
-                  <valeur.icon size={26} className="text-mls-gold" />
+                <div className="w-14 h-14 rounded-full bg-mls-blue-light/20 flex items-center justify-center mx-auto mb-4">
+                  <valeur.icon size={26} className="text-mls-blue-light" />
                 </div>
                 <h3 className="text-lg font-bold mb-2">{valeur.title}</h3>
                 <p className="text-sm text-white/70">{valeur.description}</p>
@@ -260,7 +260,7 @@ mls.build(your_ideas);`}
             <div>
               <h2 className="text-3xl md:text-4xl font-bold text-mls-navy mb-6">
                 Pourquoi choisir{" "}
-                <span className="text-mls-gold">MLS Co</span> ?
+                <span className="text-mls-blue-light">MLS Co</span> ?
               </h2>
               <p className="text-lg text-mls-navy/60 mb-8">
                 Nous combinons expertise technique, créativité et rigueur pour livrer
@@ -277,7 +277,7 @@ mls.build(your_ideas);`}
                   <li key={i} className="flex items-start gap-3">
                     <CheckCircle2
                       size={20}
-                      className="text-mls-gold flex-shrink-0 mt-1"
+                      className="text-mls-blue-light flex-shrink-0 mt-1"
                     />
                     <span className="text-mls-navy/80">{item}</span>
                   </li>
@@ -296,7 +296,7 @@ mls.build(your_ideas);`}
                   key={i}
                   className="bg-gradient-to-br from-mls-navy to-mls-marine text-white rounded-2xl p-6 text-center"
                 >
-                  <div className="text-3xl md:text-4xl font-bold text-mls-gold mb-2">
+                  <div className="text-3xl md:text-4xl font-bold text-mls-blue-light mb-2">
                     {stat.number}
                   </div>
                   <div className="text-sm text-white/70">{stat.label}</div>
@@ -314,7 +314,7 @@ mls.build(your_ideas);`}
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="flex justify-center gap-1 mb-6">
             {[1, 2, 3, 4, 5].map((i) => (
-              <Star key={i} size={24} className="text-mls-gold fill-mls-gold" />
+              <Star key={i} size={24} className="text-mls-blue-light fill-mls-blue-light" />
             ))}
           </div>
 
@@ -328,7 +328,7 @@ mls.build(your_ideas);`}
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/devis"
-              className="inline-flex items-center justify-center gap-2 bg-mls-gold hover:bg-mls-gold-dark text-mls-navy font-semibold px-8 py-4 rounded-lg transition-all duration-200 hover:scale-105"
+              className="inline-flex items-center justify-center gap-2 bg-mls-blue-light hover:bg-mls-blue-dark text-mls-navy font-semibold px-8 py-4 rounded-lg transition-all duration-200 hover:scale-105"
             >
               Démarrer mon projet
               <ArrowRight size={20} />
@@ -337,7 +337,7 @@ mls.build(your_ideas);`}
               href="https://wa.me/22657022479"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 border border-white/20 hover:border-mls-gold hover:text-mls-gold text-white font-semibold px-8 py-4 rounded-lg transition-all duration-200"
+              className="inline-flex items-center justify-center gap-2 border border-white/20 hover:border-mls-blue-light hover:text-mls-blue-light text-white font-semibold px-8 py-4 rounded-lg transition-all duration-200"
             >
               WhatsApp direct
             </a>

@@ -166,15 +166,15 @@ export default function ContactPage() {
                     <div
                       className={`flex items-start gap-4 p-4 rounded-xl border transition-all ${
                         contact.highlight
-                          ? "bg-mls-gold/5 border-mls-gold/30 hover:bg-mls-gold/10"
-                          : "bg-white border-mls-navy/5 hover:border-mls-gold/30"
+                          ? "bg-mls-blue-light/5 border-mls-blue-light/30 hover:bg-mls-blue-light/10"
+                          : "bg-white border-mls-navy/5 hover:border-mls-blue-light/30"
                       }`}
                     >
                       <div
                         className={`w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 ${
                           contact.highlight
-                            ? "bg-mls-gold text-mls-navy"
-                            : "bg-mls-gold/10 text-mls-gold"
+                            ? "bg-mls-blue-light text-mls-navy"
+                            : "bg-mls-blue-light/10 text-mls-blue-light"
                         }`}
                       >
                         <Icon size={22} />
@@ -213,19 +213,19 @@ export default function ContactPage() {
               {/* Horaires */}
               <div className="bg-mls-navy text-white rounded-2xl p-6">
                 <div className="flex items-center gap-3 mb-4">
-                  <Clock size={22} className="text-mls-gold" />
+                  <Clock size={22} className="text-mls-blue-light" />
                   <h3 className="font-bold">Horaires</h3>
                 </div>
                 <ul className="space-y-2 text-sm text-white/70">
                   <li className="flex justify-between">
                     <span>Lundi - Vendredi</span>
-                    <span className="text-mls-gold font-medium">
+                    <span className="text-mls-blue-light font-medium">
                       08h - 18h
                     </span>
                   </li>
                   <li className="flex justify-between">
                     <span>Samedi</span>
-                    <span className="text-mls-gold font-medium">
+                    <span className="text-mls-blue-light font-medium">
                       09h - 14h
                     </span>
                   </li>
@@ -254,7 +254,7 @@ export default function ContactPage() {
                     value={formData.nom}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 border border-mls-navy/10 rounded-lg focus:outline-none focus:border-mls-gold transition"
+                    className="w-full px-4 py-3 border border-mls-navy/10 rounded-lg focus:outline-none focus:border-mls-blue-light transition"
                     placeholder="Votre nom"
                   />
                 </div>
@@ -269,7 +269,7 @@ export default function ContactPage() {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 border border-mls-navy/10 rounded-lg focus:outline-none focus:border-mls-gold transition"
+                    className="w-full px-4 py-3 border border-mls-navy/10 rounded-lg focus:outline-none focus:border-mls-blue-light transition"
                     placeholder="votre@email.com"
                   />
                 </div>
@@ -283,7 +283,7 @@ export default function ContactPage() {
                     name="telephone"
                     value={formData.telephone}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border border-mls-navy/10 rounded-lg focus:outline-none focus:border-mls-gold transition"
+                    className="w-full px-4 py-3 border border-mls-navy/10 rounded-lg focus:outline-none focus:border-mls-blue-light transition"
                     placeholder="+226 XX XX XX XX"
                   />
                 </div>
@@ -297,7 +297,7 @@ export default function ContactPage() {
                     value={formData.sujet}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 border border-mls-navy/10 rounded-lg focus:outline-none focus:border-mls-gold transition bg-white"
+                    className="w-full px-4 py-3 border border-mls-navy/10 rounded-lg focus:outline-none focus:border-mls-blue-light transition bg-white"
                   >
                     <option value="">Choisir un sujet</option>
                     <option value="Site web">Création de site web</option>
@@ -320,7 +320,7 @@ export default function ContactPage() {
                     onChange={handleChange}
                     required
                     rows={5}
-                    className="w-full px-4 py-3 border border-mls-navy/10 rounded-lg focus:outline-none focus:border-mls-gold transition resize-none"
+                    className="w-full px-4 py-3 border border-mls-navy/10 rounded-lg focus:outline-none focus:border-mls-blue-light transition resize-none"
                     placeholder="Décrivez votre projet..."
                   ></textarea>
                 </div>
@@ -328,7 +328,7 @@ export default function ContactPage() {
                 <button
                   type="submit"
                   disabled={status === "loading"}
-                  className="w-full inline-flex items-center justify-center gap-2 bg-mls-gold hover:bg-mls-gold-dark disabled:opacity-50 disabled:cursor-not-allowed text-mls-navy font-semibold px-6 py-4 rounded-lg transition-all duration-200 hover:scale-105"
+                  className="w-full inline-flex items-center justify-center gap-2 bg-mls-blue-light hover:bg-mls-blue-dark disabled:opacity-50 disabled:cursor-not-allowed text-mls-navy font-semibold px-6 py-4 rounded-lg transition-all duration-200 hover:scale-105"
                 >
                   {status === "loading" ? "Envoi en cours..." : "Envoyer le message"}
                   <Send size={18} />
@@ -381,7 +381,7 @@ export default function ContactPage() {
                   </span>
                   <ChevronDown
                     size={20}
-                    className={`text-mls-gold flex-shrink-0 transition-transform ${
+                    className={`text-mls-blue-light flex-shrink-0 transition-transform ${
                       openFaq === i ? "rotate-180" : ""
                     }`}
                   />
