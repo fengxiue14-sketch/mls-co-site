@@ -159,8 +159,8 @@ export default function EquipePage() {
           </h2>
           <p className="text-lg text-mls-navy/70 mb-4">
             MLS Co est née en 2026 à Ouagadougou, de la rencontre de trois
-            passionnés d'informatique : <strong>Chérif</strong>,{" "}
-            <strong>Oscar</strong> et <strong>Levis</strong>.
+            passionnés d'informatique : <strong>NIKIEMA Chérif</strong>,{" "}
+            <strong>OUÉDRAOGO Oscar</strong> et <strong>DELKRIST Levis</strong>.
           </p>
           <p className="text-lg text-mls-navy/70 mb-4">
             Notre ambition : rendre la technologie accessible aux entreprises
