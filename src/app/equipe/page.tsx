@@ -17,7 +17,7 @@ import {
 export default function EquipePage() {
   const team = [
     {
-      name: "Chérif",
+      name: "Chérif NIKIEMA",
       role: "Chef de Projet & Relation Client",
       description:
         "Coordinateur technique, garant de la qualité et de la livraison dans les délais. Point de contact principal pour nos clients.",
@@ -26,7 +26,7 @@ export default function EquipePage() {
       color: "from-mls-blue-light to-mls-blue-dark",
     },
     {
-      name: "Oscar",
+      name: "Oscar OUÉDRAOGO",
       role: "Développeur Frontend",
       description:
         "Spécialiste des interfaces modernes, React, Next.js et expérience utilisateur. Transforme vos idées en designs élégants.",
@@ -35,7 +35,7 @@ export default function EquipePage() {
       color: "from-blue-500 to-blue-700",
     },
     {
-      name: "Levis",
+      name: "DELKRIST Levis",
       role: "Développeur Backend & Cybersécurité",
       description:
         "Expert des API, bases de données, sécurité et infrastructure cloud. Assure la robustesse et la sécurité de vos systèmes.",
